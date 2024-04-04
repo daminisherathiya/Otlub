@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply !tw-bg-primary-dark;
+  }
+}
+@layer utilities {
+  @media (max-width: 1330px) {
+    .c-hide-web-header-items {
+      @apply tw-hidden;
+    }
+    .c-show-mobile-drawer {
+      @apply tw-flex;
+    }
+  }
+  .c-quill-editor .ql-container {
+    min-height: 143px;
+    border-radius: 0 0 5px 5px;
+  }
+  .c-quill-editor .ql-toolbar {
+    border-radius: 5px 5px 0 0;
+  }
+}
